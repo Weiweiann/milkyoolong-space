@@ -1,0 +1,9 @@
+<div>
+  <span> article works! </span>
+  <!-- {{ Object.keys(items) }} -->
+  <div *ngFor="let item of items | async">
+    {{ item.title }}
+    {{ item.create_datetime }}
+    yeah firebase works!
+  </div>
+</div>
