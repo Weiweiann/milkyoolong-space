@@ -9,7 +9,12 @@ import Quill from 'quill';
 })
 export class EditorComponent implements OnInit {
   // variables
+  article = {
+    content: '',
+    title: '',
+  };
   articleContent = '';
+  articleTitle = '';
   toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
@@ -37,10 +42,11 @@ export class EditorComponent implements OnInit {
     });
 
     editor.on('text-change', () => {
-      this.articleContent = editor.container.firstChild.innerHTML;
+      this.article.content = editor.container.firstChild.innerHTML;
     });
   }
   save(): void {
-    console.log('hello');
+    console.log(this.article);
+    this.db.collection('articles').add(this.article);
   }
 }

@@ -2,7 +2,7 @@
   <!-- {{ Object.keys(items) }} -->
   <div *ngFor="let item of items | async">
     {{ item.title }}
-    <div >{{item.content}}</div>
+    <div [innerHtml]="item.content"></div>
     {{ item.create_datetime }}
   </div>
 </div>
