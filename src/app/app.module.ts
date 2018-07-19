@@ -13,13 +13,17 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { EditorComponent } from './editor/editor.component';
 import { LoginComponent } from './login/login.component';
+import { TimePipe } from './time.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     EditorComponent,
-    LoginComponent
+    LoginComponent,
+    TimePipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
