@@ -12,7 +12,7 @@ export class ArticleComponent implements OnInit {
   items: Observable<any[]>;
 
   constructor(private db: AngularFirestore) {
-    this.items = db.collection('articles').valueChanges();
+    this.items = db.collection('articles', ref => ref.orderBy('create_datetime', 'desc')).valueChanges();
     console.log(this.items);
     console.log(db.collection('articles'));
   }

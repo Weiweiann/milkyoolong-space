@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import Quill from 'quill';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-editor',
@@ -12,6 +13,7 @@ export class EditorComponent implements OnInit {
   article = {
     content: '',
     title: '',
+    create_datetime: 0,
   };
   articleContent = '';
   articleTitle = '';
@@ -46,6 +48,7 @@ export class EditorComponent implements OnInit {
     });
   }
   save(): void {
+    this.article.create_datetime = Date.now();
     console.log(this.article);
     this.db.collection('articles').add(this.article);
   }

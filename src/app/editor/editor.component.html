@@ -1,4 +1,13 @@
 
+
+
+<h3>編寫新文章</h3>
+<hr>
+<label for="">文章標題</label>
 <input type="text" [(ngModel)]="article.title">
-<div id="editor"></div>
-<button (click)="save()">save</button>
+<label for="">文章內容</label>
+<div class="editor-content" id="editor"></div>
+<hr>
+<button class="button-primary" (click)="save()">發佈</button>
+
+ 
