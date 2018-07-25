@@ -3,8 +3,12 @@
 
 <h3>編寫新文章</h3>
 <hr>
-<label for="">文章標題</label>
+<label for="">標題</label>
 <input type="text" [(ngModel)]="article.title">
+<label for="">分類</label>
+<input type="text" [(ngModel)]="article.category">
+<label for="">標籤</label>
+<input type="text" [(ngModel)]="article.tag">
 <label for="">文章內容</label>
 <div class="editor-content" id="editor"></div>
 <hr>

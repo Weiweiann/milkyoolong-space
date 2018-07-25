@@ -15,6 +15,7 @@ import { EditorComponent } from './editor/editor.component';
 import { LoginComponent } from './login/login.component';
 import { TimePipe } from './time.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     EditorComponent,
     LoginComponent,
     TimePipe,
-    NavbarComponent
+    NavbarComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
