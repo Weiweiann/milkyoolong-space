@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import Quill from 'quill';
-import firebase from 'firebase';
+// import firebase from 'firebase';
 
 @Component({
   selector: 'app-editor',
