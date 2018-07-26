@@ -22,11 +22,8 @@ export class ArticleService {
     //
   }
 
-  getArticles(): Article[] {
-    //
-  }
+  // getArticles(): Article[] {
+  // }
 
-  getArticle(id: number): Article {
-    //
-  }
+  // getArticle(id: number): Article {}
 }
