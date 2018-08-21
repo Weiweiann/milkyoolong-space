@@ -10,7 +10,7 @@ import { ArticleService } from '../article.service';
   styleUrls: ['./editor.component.sass']
 })
 export class EditorComponent implements OnInit {
-  article: Article;
+  article = new Article();
   // variables
   constructor(private service: ArticleService) {}
   ngOnInit() {
@@ -38,7 +38,7 @@ export class EditorComponent implements OnInit {
     });
   }
   save(): void {
-    console.log(this.article);
-    // this.service.saveArticle(this.article);
+    // console.log(this.article);
+    this.service.saveArticle(this.article);
   }
 }

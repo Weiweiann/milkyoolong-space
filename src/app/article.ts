@@ -6,6 +6,7 @@ export default class Article {
   category: string;
   author: string;
   updateTime: number;
+  shortContext: string;
   // constructor(
   //   title: string,
   //   context: string,

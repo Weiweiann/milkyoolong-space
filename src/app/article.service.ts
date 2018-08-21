@@ -11,7 +11,9 @@ export class ArticleService {
 
   saveArticle(article: Article): void {
     article.createTime = Date.now();
-    this.db.collection('articles').add(article);
+    article.shortContext = article.context.slice(0, 50).replace(/<[^>*]>/g, '') + '...';
+    const flatenArticle = JSON.parse(JSON.stringify(article));
+    this.db.collection('articles').add(flatenArticle);
   }
 
   editArticle(article: Article): void {
