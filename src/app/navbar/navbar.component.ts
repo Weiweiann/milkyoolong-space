@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.shuttleFly();
+    // this.shuttleFly();
   }
 
   async shuttleFly() {
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
   }
 
   sleep(msec) {
-    new Promise((resolve, reject) => {
+    reteurn Promise((resolve, reject) => {
       setTimeout(resolve, msec);
     });
   }

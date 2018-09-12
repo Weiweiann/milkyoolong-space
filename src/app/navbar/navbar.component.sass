@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 #blog-name
-    font-family: 'Monoton', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 36px
     margin-right: 0.5rem
+    color: white
 
 
 .navbar-layout
@@ -12,10 +13,45 @@
     height: 100vh;
     z-index: 10;
     width: 100%
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-.navbar-item
-    padding: 0 10px;
+.nav-item
+    font-family: 'Permanent Marker', cursive;
+    padding: 10px 10px;
     margin: 0 5px;
+    float: right
+    color: white
+
+.hero-rect
+    position: relative
+    width: 100%
+    height: 50rem
+    transform: translate(10rem , 8rem);
+    &:before
+        content: ''
+        position: absolute
+        top: 0px
+        width: 100%
+        height: 100% 
+        background-image: linear-gradient(40deg, #ffffe5, #ffffe5, #ffffe5, #ff8100);
+        opacity: 0.6
+    
+.hero-image
+    transform: translate(-10rem , -37rem);
+    height: 50rem
+    width: 90rem;
+    position: relative
+    background-size: cover;
+    background-image: url('/assets/back1.jpg')
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    // &:before
+    //     content: ''
+    //     position: absolute
+    //     top: 0px
+    //     width: 100%
+    //     height: 100%
+    //     background: #88c282;
+    //     background-image: linear-gradient(90deg, #ffffe5, #f7fcc4, #e4f4ac, #c7e89b, #a2d88a, #78c578, #4eaf63, #2f944e, #15793f, #036034, #036034);
+    //     opacity: 0.6
