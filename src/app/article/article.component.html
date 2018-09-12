@@ -1,14 +1,16 @@
-<div>
-  <!-- {{ Object.keys(items) }} -->
+<div class="container">
   <div *ngFor="let item of items | async" class="article">
-    <h5 class="article-title">
-      {{ item.title }}
+    <img src="https://fakeimg.pl/800x100/">
+    <h1 class="article-title">{{ item.title }}</h1>
+    <p>{{ item.category }}</p>
+    <p>{{ item.label }}</p>
+    <p>
       <small class="article-time">  
-        {{ item.create_datetime | date: 'yyyy-MM-dd HH:mm' }}
+        {{ item.createTime | date: 'yyyy-MM-dd HH:mm' }}
       </small>
-    </h5>
+    </p>
     <hr>
-    <div class="article-content" [innerHtml]="item.content"></div>
-    <span>{{ item }}</span>
+    <div class="article-short-context"></div>
+    <div class="article-context" [innerHtml]="item.content"></div>
   </div>
 </div>
